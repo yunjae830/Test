@@ -6,7 +6,9 @@
     </head>
     <body>
         <script>
-            document.write(decodeURIComponent(location.href.substr(location.href.lastIndexOf('=') + 1)));
+            var origin = document.write(location.href.substr(location.href.lastIndexOf('=') + 1));
+            var after = decodeURIComponent(origin);
+            alert(after);
         </script> 
     </body>
 </html>
