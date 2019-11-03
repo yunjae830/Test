@@ -4,16 +4,19 @@
   <meta charset="utf-8">
     <title>HTML</title>
     <script>
-        function getParameterByName(name) {
-            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-            results = regex.exec(location.search);
-            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        function receive_get_data(param) {
+        var result = null, tmp = [];
+        var items = window.location.search.substr(1).split("&");
+            for (var i = 0; i < items.length; i++) {
+                tmp = items[i].split("=");
+                if (tmp[0] === param) result = decodeURIComponent(tmp[1]);
+            }
+            return result;
         }
-        var title = getParameterByName('title');
-        var content = getParameterByName('content');
+        document.getElementById("frm_username").innerHTML = receive_get_data("content");
     </script>
   </head>
-  <body>
+  <body> 
+    <p>Name: <span id="frm_username"></span></p>
   </body>
 </html>
