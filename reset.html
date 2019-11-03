@@ -4,13 +4,14 @@
         <title>XSS</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     </head>
-    <body>
         <script language = "javascript">
             temp = location.href.split("?");
             data=temp[1].split(":");
             title = data[0];
             content = data[1];
             document.writｅ(title + " " + content);
-            </script>
+        </script>
+    <body>
+        <h1>HELLO</h1>
     </body>
 </html>
