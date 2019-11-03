@@ -4,19 +4,9 @@
   <meta charset="utf-8">
     <title>HTML</title>
     <script>
-        function receive_get_data(param) {
-        var result = null, tmp = [];
-        var items = window.location.search.substr(1).split("&");
-            for (var i = 0; i < items.length; i++) {
-                tmp = items[i].split("=");
-                if (tmp[0] === param) result = decodeURIComponent(tmp[1]);
-            }
-            return result;
-        }
-        document.getElementById("frm_username").innerHTML = receive_get_data("title");
+        alert('크로스 사이트 스크립팅 공격');
     </script>
   </head>
-  <body> 
-    <p>Name: <span id="frm_username"></span></p>
+  <body>
   </body>
 </html>
