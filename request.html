@@ -4,12 +4,17 @@
   <meta charset="utf-8">
     <title>HTML</title>
     <script>
-        
+        function changeimage(){
+        var image = document.getElementById('abc');
+        image.src = "http://docsplayer.org/docs-images/98/135208019/images/52-0.jpg";
+    }
     </script>
   </head>
   <body>
-    <div>
-      <img src="https://www.hushwish.com/wp-content/uploads/2018/12/emo_iu_off_001.jpg" alt="아이유">
+    <div id="csrf">
+      <a onclick="changeimage()">
+        <img id="abc" src="https://www.hushwish.com/wp-content/uploads/2018/12/emo_iu_off_001.jpg" alt="아이유">
+      </a>
     </div>
   </body>
 </html>
