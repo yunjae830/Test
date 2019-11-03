@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>XSS</title>
+    </head>
+    <body>
+        <script>
+            document.write(location.href.substr(location.href.lastIndexOf('=') + 1));
+        </script> 
+    </body>
+</html>
